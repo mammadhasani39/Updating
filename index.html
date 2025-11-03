@@ -55,15 +55,34 @@
       100% { transform: rotate(360deg); }  
     }  
   
-    p {  
-      font-size: 18px;  
-      font-weight: bold;  
-      line-height: 1.6;  
-      margin-top: 0;  
-      z-index: 2;  
-      color: #00ff00;  
-      text-shadow: 0 0 5px #0f0;  
-    }  
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.6;
+      margin-top: 0;
+      z-index: 2;
+      background: linear-gradient(90deg, #00bfff, #ff004c, #00bfff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow:
+        0 0 10px #00bfff,
+        0 0 20px #ff004c,
+        0 0 30px #00bfff;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow:
+          0 0 10px #00bfff,
+          0 0 20px #ff004c;
+      }
+      100% {
+        text-shadow:
+          0 0 20px #ff004c,
+          0 0 40px #00bfff;
+      }
+    }
   </style>  
 </head>  
 <body>  
